@@ -10,15 +10,14 @@ import java.io.IOException;
 import java.util.*;
 
 public class Main {
-    static final int maxURL =8;
+    static final int maxURL =1000;
     public static void main(String[] args) throws IOException {
-
+        long startTime = System.currentTimeMillis();
         //广度优先搜索使用queue
         Queue<NewsWithRelated> newsQueue = new LinkedList<>();//LinkedList实现了Queue接口。
         //如果需要深度优先搜索需要改为栈
-        String startUrl = "https://readhub.me/topic/5bMmlAm75lD";
+        String startUrl = "https://api.readhub.cn/topic/5bMmlAm75lD";
         NewsWithRelated startRelatedNews = UrlNewsReader.readNews(startUrl);
-        System.out.println(startRelatedNews.getUrl());
         //读取startUrl自己以及相关新闻返回NewsWithRelated对象
 
         int count = 0;
@@ -40,6 +39,8 @@ public class Main {
                 }
             }
         }
+        long endTime=System.currentTimeMillis();
         new ListViewer(results).display();//战展示相关新闻
+        System.out.println("程序运行时间： " + (endTime - startTime) + "ms");
     }
 }

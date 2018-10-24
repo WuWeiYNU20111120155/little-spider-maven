@@ -7,28 +7,25 @@
     <groupId>wuweiJava.spider</groupId>
     <artifactId>littleSpider</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-<dependencies>
-    <dependency>
-        <groupId>org.jsoup</groupId>
-        <artifactId>jsoup</artifactId>
-        <version>1.10.3</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/com.cedarsoft.commons/io -->
-    <dependency>
-        <groupId>com.cedarsoft.commons</groupId>
-        <artifactId>io</artifactId>
-        <version>8.5.1</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.json/json -->
-    <dependency>
-        <groupId>org.json</groupId>
-        <artifactId>json</artifactId>
-        <version>20160810</version>
-    </dependency>
-</dependencies>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.11.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.cedarsoft.commons/io -->
+        <dependency>
+            <groupId>com.cedarsoft.commons</groupId>
+            <artifactId>io</artifactId>
+            <version>8.5.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20160810</version>
+        </dependency>
 
+    </dependencies>
 </project>

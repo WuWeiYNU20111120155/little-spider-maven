@@ -6,16 +6,22 @@ import java.util.Map;
 public class NewsWithRelated extends UrlNews {//继承
 
     private HashMap<String, String> relateds = new HashMap<>();//HashMap保存k-v，自己的私有成员变量
+    private String api;
     public NewsWithRelated(String url, String title, String content){
         super(url,title,content);//调用父类构造方法
     }
 
-    public void addRelated(String title, String url){
+    public void addRelated(String title,String api, String url){
         this.relateds.put(title, url);
+        this.api = api;
     }//添加相关新闻的title和url
 
     public  HashMap<String, String> getRelateds(){
         return this.relateds;
+    }
+
+    public String getApi() {
+        return api;
     }
 
     @Override
